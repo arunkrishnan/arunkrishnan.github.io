@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+      var spreadsheetID = "1Z6jIBfybiwIEoXiGOyTK8ON0QtM2KdzvJSkaANvpp4k";
+      var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var table = new google.visualization.DataTable();
+        table.addColumn('string', 'States');
+        table.addColumn('number', 'Population');
+        $.getJSON(url, function(data) {
+          var entry = data.feed.entry;
+          $(entry).each(function(){
+            table.addRow([this.gsx$state.$t, parseInt(this.gsx$population.$t)]);
+          });
+          var options = {'title':'Population Chart',
+                       'width':600,
+                       'height':450};
+          var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+          chart.draw(table, options);
+        });
+      }
+    </script>
+  </head>
+
+  <body>
+    <div id="chart_div"></div> 
+  </body>
+</html>
