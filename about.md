@@ -1,18 +1,7 @@
----
-layout: page
-title: About
-permalink: /about/
----
+I'm Arun Krishnan, a senior software engineer who has been fortunate enough to work in the fascinating realm of technology. This blog is my modest attempt to share my learnings, experiences, and insights accumulated over the years.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+As a lifelong learner, I am constantly humbled by the vastness and complexity of the tech industry. Each day brings new challenges and opportunities for growth, and I approach them with a sense of curiosity and a deep appreciation for the knowledge that others have shared.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Through this blog, I hope to humbly contribute to the tech community by sharing practical advice, lessons learned from my own experiences, and reflections on the ever-evolving landscape of software development. My aim is to inspire and support fellow software engineers, aspiring developers, and anyone who shares a passion for technology.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Here, you'll find a collection of articles that delve into various technical topics, from coding best practices to insights on emerging trends and tools. I strive to simplify complex concepts and provide practical examples that can be applied in real-world scenarios.
