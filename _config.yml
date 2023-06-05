@@ -16,7 +16,7 @@
 title: Blog
 email: ........@gmail.co
 description: >- # this means to ignore newlines until "baseurl:"
- Here, you'll find a treasure trove of articles that delve into the intricacies of software development, exploring diverse topics ranging from coding techniques and best practices to the latest trends and innovations. I aim to demystify complex concepts, making them accessible to both seasoned professionals and those just starting their tech journey.
+ Here, you'll find a treasure trove of articles that delve into the intricacies of software development, exploring diverse topics ranging from coding techniques and best practices to the latest trends and innovations.
 domain: arunkrishnan.github.io       # if you want to force HTTPS, specify the domain without the http at the start, e.g. example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://arunkrishnan.github.io  # the base hostname and protocol for your site, e.g. http://example.com
@@ -25,9 +25,15 @@ github_username:  arunkrishnan
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 # plugins:
 #   - jekyll-feed
+
+theme: jekyll-theme-hydeout
+plugins:
+  # - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate  # for pagination
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
