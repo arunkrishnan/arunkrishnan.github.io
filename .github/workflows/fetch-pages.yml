@@ -13,7 +13,12 @@ jobs:
       - name: Fetch Markdown File
         run: |
           curl -o _posts/2023-06-08-jkyll-intro.md https://github.com/arunkrishnan/test-md-pull/2023-06-08-jkyll-intro.md
+      - name: Check for Changes
+        id: git-diff
+        run: |
+          git diff --quiet || echo "::set-output name=changes::true"
       - name: Commit and Push Changes
+        if: steps.git-diff.outputs.changes == 'true'
         run: |
           git config --local user.email "hereisarunkrishnan@gmail.com"
           git config user.name "arunkrishnan"
