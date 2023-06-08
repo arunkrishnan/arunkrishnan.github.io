@@ -1,0 +1,23 @@
+name: Fetch Blog Posts
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch Markdown File
+        run: |
+          curl -o _posts/2023-06-08-jkyll-intro.md https://github.com/arunkrishnan/test-md-pull/2023-06-08-jkyll-intro.md
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "hereisarunkrishnan@gmail.com"
+          git config user.name "arunkrishnan"
+          git add _posts/
+          git commit -m "Update fetched Markdown file"
+          git push
+          
